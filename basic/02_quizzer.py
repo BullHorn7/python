@@ -197,10 +197,12 @@ capitals_dict = {
     "Zimbabwe": "Harare"
 }
 
+print("\n3 strikes and you're out so pay attention!\n")
+
 countries = list(capitals_dict.keys())
 score = 0
-
-for questions in [1, 2, 3, 4, 5]:
+questions = 0
+while questions < 3:
     country = random.choice(countries)
     capital = capitals_dict[country]
     answer = input("What is the capital of " + country + "?\n> ")
@@ -210,6 +212,7 @@ for questions in [1, 2, 3, 4, 5]:
         score += 1
     else:
         print("Wrong! The capital of " + country + " is:\n" + capital)
+        questions += 1
 
-print("You've answered correctly " + str(score) + " out of 5.")
+print("\nYour score: " + str(score))
 print("Thanks for playing! :)")
