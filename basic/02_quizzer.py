@@ -211,7 +211,7 @@ while questions < 3:
         print("That's right!")
         score += 1
     else:
-        print("Wrong! The capital of " + country + " is:\n" + capital)
+        print("Wrong! The capital of " + country + " is:\n--> " + capital)
         questions += 1
 
 print("\nYour score: " + str(score))
