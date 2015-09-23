@@ -1,3 +1,6 @@
+# This is a basic dice rolling program. In the future I'll try to rewrite it
+# in order to allow more complex rolls, for ex. 3d8+5 
+
 import random
 
 while True:
