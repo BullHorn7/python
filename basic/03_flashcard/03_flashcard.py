@@ -7,22 +7,17 @@ if len(sys.argv) < 2:
 
 flashcard_filename = sys.argv[1]
 f = open(flashcard_filename, "r")
-
 question_dict = {}
-
 for line in f:
     entry = line.strip().split(",")
     question = entry[0]
     answer = entry[1]
     question_dict[question] = answer
-
 f.close()
 
 print("Welcome to the flashcard quizzer.")
 print("Type 'quit' to quit the game.\n")
-
 questions = list(question_dict.keys())
-
 score = 0
 count = 0
 while True:
