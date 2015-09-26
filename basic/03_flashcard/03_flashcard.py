@@ -42,10 +42,10 @@ while True:
         print("Nope! The right answer is:\n> " + answer)
 
 result = count / (score+1)
-
 if result <= 1 and count >= 5:
-    print("Well done! You're a legend! You got " + str(score) + " right answers in " + str(count) + " tries.")
+    print("Well done! You're a legend!")
 elif result >= 3:
-    print("Wow, dude. You suck. You got " + str(score) + " right answers in " + str(count) + " tries.")
+    print("Wow, dude. You suck.")
 else:
-    print("Nice try. You got " + str(score) + " right answers in " + str(count) + " tries.")
+    print("Nice try.")
+print("You got " + str(score) + " right answers in " + str(count) + " tries.")
