@@ -16,7 +16,9 @@ for word in scrabble_dict:
     if "uu" in word:
         print(word)
 
-# Defines a function to 
+# Defines a function to scan each word in the list of words
+# and determine whether there is a letter that never repeats 
+# more than once in a row 
 letters = "abcdefghijklmnopqrstuvwxyz"
 def has_a_double(letter):
     for word in scrabble_dict:
