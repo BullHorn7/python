@@ -29,3 +29,16 @@ def has_a_double(letter):
 for letter in letters:
     if not has_a_double(letter):
         print(letter + " never appears doubled")
+
+# Defined a function to scan each word in the list of words
+# and determine whether there is a word that includes all the vowels
+vowels = "aeiou"
+def has_all_vowels(word):
+    for vowel in vowels:
+        if vowel not in word:
+            return False
+    return True
+# Prints all words that returned True in the function we defined
+for word in scrabble_dict:
+    if has_all_vowels(word):
+        print(word)
