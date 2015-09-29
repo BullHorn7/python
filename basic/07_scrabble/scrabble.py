@@ -13,23 +13,28 @@ filename.close()
 
 print("\nWelcome to the Scrabble cheater!")
 print("This program contains " + str(len(word_list)) + " valid Scrabble words")
+print("Quit the program at any time by typing '.quit'")
 
-valid_words = []
-rack = list(input("\nWhat letters do you have in your Scrabble rack?\n-->"))
-for word in word_list:
-    available_letters = rack[:]
-    valid = True
-    for letter in word:
-        if letter not in available_letters:
-            valid = False
-            break
-        available_letters.remove(letter)
+while True:
+    valid_words = []
+    rack = list(input("\nWhat letters do you have in your Scrabble rack?\n--> "))
+    if rack == list(".quit"):
+        break
+    else:
+        for word in word_list:
+            available_letters = rack[:]
+            valid = True
+            for letter in word:
+                if letter not in available_letters:
+                    valid = False
+                    break
+                available_letters.remove(letter)
 
-    if valid:
-        score = 0
-        for letter in word:
-            score = score + scores[letter]
-        valid_words.append((score, word))
+            if valid:
+                score = 0
+                for letter in word:
+                    score += scores[letter]
+                valid_words.append((score, word))
 
-for play in sorted(valid_words):
-    print(str(play[0]) + " " + (play[1]))
+        for play in sorted(valid_words):
+            print(str(play[0]) + " " + (play[1]))
