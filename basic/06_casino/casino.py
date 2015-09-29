@@ -8,3 +8,15 @@ class Die(object):
 
     def roll(self):
         return random.rantint(1, self.sides) 
+
+print("D6 rolls:")
+d = Die(6)
+print(d.roll())
+print(d.roll())
+print(d.roll())
+
+print("D20 rolls:")
+d2 = Die(20)
+print(d.roll())
+print(d.roll())
+print(d.roll())
