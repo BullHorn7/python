@@ -7,7 +7,7 @@ class Die(object):
         self.sides = sides
 
     def roll(self):
-        return random.rantint(1, self.sides) 
+        return random.randint(1, self.sides) 
 
 print("D6 rolls:")
 d = Die(6)
