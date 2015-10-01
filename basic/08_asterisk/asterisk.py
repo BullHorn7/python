@@ -14,7 +14,6 @@ for number in range(amount):
 amount = int(input("How big of a triangle would you like to see, nerd?\n--> "))
 for number in range(amount):
     for value in range(number+1):
-        print(value)
         if value == 0 or value == number or number+1 == amount:
             sys.stdout.write("*")
         else:
