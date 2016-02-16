@@ -35,7 +35,7 @@ def scrabble_cheat():
         print(str(play[0]) + " " + (play[1]))
 
 while True:
-    rack = list(input("\nWhat letters do you have in your Scrabble rack?\n--> "))
+    rack = list(input("\nWhat letters do you have in your Scrabble rack?\n--> ").lower())
     if rack == list(".quit"):
         break
     else:
